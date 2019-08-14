@@ -182,9 +182,12 @@ def probe_wsl(silent = False):
 	global is_cygwin
 
 	if not is_cygwin:
-		packagesSubFolder = os.path.join(os.getenv('LocalAppData'), 'Packages')
-		basedir = os.path.join(packagesSubFolder, 'TheDebianProject.DebianGNULinux_76v4gfsz19hv4')
-		localStateDir = os.path.join(basedir, 'LocalState')
+		#packagesSubFolder = os.path.join(os.getenv('LocalAppData'), 'Packages')
+		#basedir = os.path.join(packagesSubFolder, 'TheDebianProject.DebianGNULinux_76v4gfsz19hv4')
+		#basedir = os.path.join(packagesSubFolder, 'CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc')
+		#localStateDir = os.path.join(basedir, 'LocalState')
+		basedir = "C://Users//cmdsz//Debian"
+		localStateDir = basedir
 	else:
 		print('JPST: not yet fixed when running this process via cygwin, sorry!')
 		sys.exit(-1)

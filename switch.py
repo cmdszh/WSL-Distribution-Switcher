@@ -22,7 +22,7 @@ if len(sys.argv) < 2:
 
 	if basedir:
 		#fix basedir to add LocalState\rootfs
-		basedir = os.path.join(basedir, 'LocalState')
+		basedir = basedir #os.path.join(basedir, 'LocalState')
 		names = glob.glob(os.path.join(basedir, 'rootfs*'))
 		not_debian = True
 		has_debian = False
@@ -64,7 +64,7 @@ print('%s[*]%s Probing the Linux subsystem...' % (Fore.GREEN, Fore.RESET))
 
 basedir, lxpath, bashpath = probe_wsl()
 #fix basedir to add LocalState\rootfs
-basedir = os.path.join(basedir, 'LocalState')
+basedir = basedir # os.path.join(basedir, 'LocalState')
 
 # read label of current distribution
 

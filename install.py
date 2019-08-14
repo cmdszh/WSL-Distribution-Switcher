@@ -47,7 +47,7 @@ print('%s[*]%s Probing the Linux subsystem...' % (Fore.GREEN, Fore.RESET))
 
 basedir, lxpath, bashpath = probe_wsl()
 # fix basedir to add LocalState\rootfs
-basedir = os.path.join(basedir, 'LocalState')
+basedir = basedir# os.path.join(basedir, 'LocalState')
 rootfsdir = os.path.join(basedir, 'rootfs')
 rootfstempdir = os.path.join(basedir, 'rootfs-temp')
 
